@@ -1,0 +1,56 @@
+{
+  "name": "payone-gmbh/mage1-payment-request",
+  "description": "Payone Magento 1 module for the payment request api",
+  "type": "magento-module",
+  "license": "GPL-3.0+",
+  "keywords": ["payment", "Magento", "Payone"],
+  "homepage": "http://www.payone.de",
+  "authors": [
+    {
+      "name": "Payone",
+      "email": "magento@payone.de"
+    }
+  ],
+  "support": {
+    "email": "tech.support@payone.de"
+  },
+  "require": {
+    "payone-gmbh/magento-1": "^4.0.0"
+  },
+  "extra": {
+    "map": [
+      [
+        "app/code/community/Payone/PRA",
+        "app/code/community/Payone/PRA"
+      ],
+      [
+        "app/design/frontend/base/default/layout/payone/pra.xml",
+        "app/design/frontend/base/default/layout/payone/pra.xml"
+      ],
+      [
+        "app/design/frontend/base/default/template/payone/pra",
+        "app/design/frontend/base/default/template/payone/pra"
+      ],
+      [
+        "app/etc/modules/Payone_PRA.xml",
+        "app/etc/modules/Payone_PRA.xml"
+      ],
+      [
+        "app/locale/de_DE/Payone_PRA.csv",
+        "app/locale/de_DE/Payone_PRA.csv"
+      ],
+      [
+        "app/locale/en_US/Payone_PRA.csv",
+        "app/locale/en_US/Payone_PRA.csv"
+      ],
+      [
+        "js/payone/pra",
+        "js/payone/pra"
+      ],
+      [
+        "lib/Payone/PaymentRequestAPI",
+        "lib/Payone/PaymentRequestAPI"
+      ]
+    ]
+  }
+}

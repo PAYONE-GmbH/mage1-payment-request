@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+
+<config>
+    <sections>
+        <payone_general>
+            <groups>
+                <pra translate="label" module="payone_pra">
+                    <label>PRA</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <paynow_active translate="label,comment" module="payone_pra">
+                            <label>Enable PRA</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </paynow_active>
+                        <success_redirect translate="label,comment" module="payone_pra">
+                            <label>Redirect to success page</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>20</sort_order>
+                            <comment>Only for Product page. Redirect to success page after payment success(YES) or stay on product page(No).</comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </success_redirect>
+                    </fields>
+                </pra>
+            </groups>
+        </payone_general>
+    </sections>
+</config>

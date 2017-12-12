@@ -1,0 +1,34 @@
+<?php /** @var Payone_PRA_Block_Button $this */ ?>
+
+<?php if ($this->helper('payone_pra/config')->isEnabled()): ?>
+    <a id="buy-now-<?php echo $this->getCurrentProductId(); ?>"
+       type="button"
+       title="<?php echo $this->__('Buy now'); ?>"
+       class="button btn-buy"
+       onclick="payonePRA.buyWithModal();">
+        <span><span><?php echo $this->__('Buy now'); ?></span></span>
+    </a>
+
+    <script type="text/javascript">
+        //<![CDATA[
+        if (window.PaymentRequest) {
+            var payonePRA = new PayonePRA({
+                    quoteCheckUrl: "<?php echo $this->getUrl('payone/quote/check', ['_secure' => true]);?>",
+                    collectDetailsUrl: "<?php echo $this->getUrl('payone/quote/details', ['_secure' => true]);?>",
+                    collectShippingUrl: "<?php echo $this->getUrl('payone/quote/shipping', ['_secure' => true]);?>",
+                    setShippingUrl: "<?php echo $this->getUrl('payone/quote/setshipping', ['_secure' => true]);?>",
+                    placeOrderUrl: "<?php echo $this->getUrl('payone/order/place', ['_secure' => true]);?>",
+                    getPaymentConfigUrl: "<?php echo $this->getUrl('payone/order/getconfig', ['_secure' => true]);?>",
+                    productId: <?php echo $this->getCurrentProductId();?>,
+                    productType: '<?php echo $this->getCurrentProductType();?>',
+                    successUrl: '<?php echo Mage::getUrl('checkout/onepage/success');?>',
+                    shouldRedirect: <?php echo $this->helper('payone_pra/config')->shouldRedirectToSuccessPage() ? 'true' : 'false';?>
+                });
+        } else {
+            $('buy-now-<?php echo $this->getCurrentProductId();?>').remove();
+        }
+
+        var Translator = new Translate({'Would you like to buy other items from cart as well?':'<?php echo $this->__('Would you like to buy other items from cart as well?')?>'});
+        //]]>
+    </script>
+<?php endif; ?>

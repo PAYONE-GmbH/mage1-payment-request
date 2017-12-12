@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Payone_PRA>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Mage_Checkout/>
+                <Payone_Core/>
+            </depends>
+        </Payone_PRA>
+    </modules>
+</config>

@@ -1,0 +1,5 @@
+<jstranslator>
+    <pra-cart-message translate="message" module="payone_pra">
+        <message>Would you like to buy other items from cart as well?</message>
+    </pra-cart-message>
+</jstranslator>

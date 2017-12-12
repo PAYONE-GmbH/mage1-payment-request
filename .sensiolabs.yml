@@ -1,0 +1,4 @@
+rules:
+  php.psr1:
+    enabled: false
+

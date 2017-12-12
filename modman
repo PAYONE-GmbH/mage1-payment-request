@@ -1,0 +1,8 @@
+app/code/community/Payone/PRA app/code/community/Payone/PRA
+app/design/frontend/base/default/layout/payone/pra.xml app/design/frontend/base/default/layout/payone/pra.xml
+app/design/frontend/base/default/template/payone/pra app/design/frontend/base/default/template/payone/pra
+app/etc/modules/Payone_PRA.xml app/etc/modules/Payone_PRA.xml
+app/locale/de_DE/Payone_PRA.csv app/locale/de_DE/Payone_PRA.csv
+app/locale/en_US/Payone_PRA.csv app/locale/en_US/Payone_PRA.csv
+js/payone/pra js/payone/pra
+lib/Payone/PaymentRequestAPI lib/Payone/PaymentRequestAPI

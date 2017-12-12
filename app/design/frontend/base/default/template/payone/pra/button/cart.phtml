@@ -1,0 +1,31 @@
+<?php /** @var Payone_PRA_Block_Button $this */ ?>
+
+<?php if ($this->helper('payone_pra/config')->isEnabled()): ?>
+    <button
+            id="buy-now"
+            type="button"
+            title="<?php echo $this->__('Buy now'); ?>"
+            class="button btn-buy"
+            onclick="payonePRA.buyFromCart()">
+        <span><span><?php echo $this->__('Buy now'); ?></span></span>
+    </button>
+
+    <script type="text/javascript">
+        //<![CDATA[
+        if (window.PaymentRequest) {
+            var payonePRA = new PayonePRA({
+                quoteCheckUrl: "<?php echo $this->getUrl('payone/quote/check', ['_secure' => true]);?>",
+                collectDetailsUrl: "<?php echo $this->getUrl('payone/quote/details', ['_secure' => true]);?>",
+                collectShippingUrl: "<?php echo $this->getUrl('payone/quote/shipping', ['_secure' => true]);?>",
+                setShippingUrl: "<?php echo $this->getUrl('payone/quote/setshipping', ['_secure' => true]);?>",
+                placeOrderUrl: "<?php echo $this->getUrl('payone/order/place', ['_secure' => true]);?>",
+                getPaymentConfigUrl: "<?php echo $this->getUrl('payone/order/getconfig', ['_secure' => true]);?>",
+                successUrl: '<?php echo Mage::getUrl('checkout/onepage/success');?>',
+                shouldRedirect: true
+            });
+        } else {
+            $('buy-now').remove();
+        }
+        //]]>
+    </script>
+<?php endif; ?>
