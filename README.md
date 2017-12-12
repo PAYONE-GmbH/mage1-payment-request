@@ -13,9 +13,9 @@
 
 ## Documentation
 
-[Documentation englisch](https://github.com/PAYONE-GmbH/mage1-payment-request/doc/documentation-en.md)
+[Documentation englisch](doc/documentation-en.md)
 
-[Dokumentation deutsch](https://github.com/PAYONE-GmbH/mage1-payment-request/doc/documentation-de.md)
+[Dokumentation deutsch](doc/documentation-de.md)
 
 More information about Magento on https://www.payone.com/magento
 
