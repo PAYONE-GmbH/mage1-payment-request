@@ -1,4 +1,4 @@
-#Dokumentation
+# Dokumentation
 Dieses Modul stellt die Payment Request API (PRA) Funktion für das Payone_Core Modul bereit.
 
 Es ermöglicht einen intuitiven und sehr einfachen Checkoutprozess für Ihre Kunden. Daten wie z.B. die Adressen und

@@ -1,4 +1,4 @@
-# Payone Payment Reuest API
+# Payone Payment Request API
 
 ## Important functions for Magento
 
@@ -13,7 +13,7 @@
 
 ## Documentation
 
-[Documentation englisch](doc/documentation-en.md)
+[Documentation english](doc/documentation-en.md)
 
 [Dokumentation deutsch](doc/documentation-de.md)
 
@@ -33,6 +33,8 @@ www.payone.com/magento<br>
 ## License
 
 See our License Agreement at: https://www.payone.com/fileadmin/downloads/sonstiges/PAYONE_Haftungs_und_Lizenzvereinbarung_Extensions.pdf
+
+[GNU General Public License, version 3 (GPLv3)](http://opensource.org/licenses/gpl-3.0)
 
 ## About BS PAYONE
 
