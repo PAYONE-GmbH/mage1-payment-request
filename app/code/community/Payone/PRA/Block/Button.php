@@ -22,9 +22,9 @@
 class Payone_PRA_Block_Button extends Mage_Core_Block_Template
 {
     /**
-     * @return mixed
+     * @return Mage_Catalog_Model_Product|mixed
      */
-    protected function _getCurrentProduct()
+    public function getCurrentProduct()
     {
         return Mage::registry('current_product');
     }
@@ -34,7 +34,7 @@ class Payone_PRA_Block_Button extends Mage_Core_Block_Template
      */
     public function getCurrentProductId()
     {
-        $product = $this->_getCurrentProduct();
+        $product = $this->getCurrentProduct();
 
         return $product ? $product->getId() : null;
     }
@@ -44,8 +44,8 @@ class Payone_PRA_Block_Button extends Mage_Core_Block_Template
      */
     public function getCurrentProductType()
     {
-        $product = $this->_getCurrentProduct();
+        $product = $this->getCurrentProduct();
 
-        return $product ? $product->getTypeID() : null;
+        return $product ? $product->getTypeId() : null;
     }
 }
